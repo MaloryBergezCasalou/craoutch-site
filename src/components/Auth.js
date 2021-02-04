@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Auth extends Component {
     render() {
         return <div className="container">
-            <h1>ZABADAVADA</h1>
+            <h1>CRAOUTCH-CENTER</h1>
             <div className="register">
                 <span>REGISTER</span>
                 <form>

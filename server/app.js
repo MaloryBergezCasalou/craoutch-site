@@ -8,5 +8,5 @@ app.get('/', (req, res) => {
 
 let port = process.env.PORT || 3003;
 app.listen(port, () => {
-    console.log(`Lancement du server : http://localhost:${port}`)
+    console.log(`Lancement du serveur : http://localhost:${port}`)
 });

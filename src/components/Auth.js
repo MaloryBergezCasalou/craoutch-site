@@ -3,22 +3,17 @@ import React, { Component } from 'react';
 class Auth extends Component {
     render() {
         return <div className="container">
-            <h1>CRAOUTCH-CENTER</h1>
+            <h1>Bienvenue !</h1>
             <div className="register">
-                <span>REGISTER</span>
+                <span>Création</span>
                 <form>
-                    <input class="input" type="text" placeholder="Email" />
-                    <input class="input" type="text" placeholder="Pseudo" />
-                    <input class="input" type="password" placeholder="Password" />
-                    <button className="registerButton" type="submit">CREATE ACCOUNT</button>
+                    <button className="window.location.href='Register.js'">Je me créé un compte</button>
                 </form>
             </div>
             <div className="login">
-                <span>LOGIN</span>
+                <span>Connection</span>
                 <form>
-                    <input class="input" type="text" placeholder="Email" />
-                    <input class="input" type="password" placeholder="Password" />
-                    <button className="loginButton" type="submit" value="Login">CONNECT</button>
+                    <button className="window.location.href='Login.js'">Je me connecte à mon compte</button>
                 </form>
             </div>
         </div>

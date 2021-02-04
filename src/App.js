@@ -5,8 +5,8 @@ import Auth from './components/Auth.js';
 
 // Main Entry point function
 function App() {
-	return <Auth />
+	return <Auth / >
 }
 
 // Rendering the entire react application
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render( < App / > , document.getElementById('root'));

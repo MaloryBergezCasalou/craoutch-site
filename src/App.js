@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Auth from './components/Auth.js';
+
 // Main Entry point function
 function App() {
-	// Tu met la total ici
-	return <h1>Hello world!</h1>;
+	return <Auth />
 }
 
 // Rendering the entire react application

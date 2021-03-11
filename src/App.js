@@ -8,6 +8,8 @@ import Register from './components/Register.js';
 // Main Entry point function
 function App() {
 	return <Auth />
+	return <Login />
+	return <Register />
 }
 
 // Rendering the entire react application

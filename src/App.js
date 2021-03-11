@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Auth from './components/Auth.js';
+import Login from './components/Login.js';
+import Register from './components/Register.js';
 
 // Main Entry point function
 function App() {
 	return <Auth />
+	return <Login />
+	return <Register />
 }
 
 // Rendering the entire react application

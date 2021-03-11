@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Auth from './components/Auth.js';
-import Login from './components/Login.js';
-import Register from './components/Register.js';
+import Auth from './components/v1/Auth.js';
+import Login from './components/v1/Login.js';
+import Register from './components/v1/Register.js';
 
 // Main Entry point function
 function App() {

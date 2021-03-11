@@ -7,7 +7,6 @@ import Register from './components/Register.js';
 
 // Main Entry point function
 function App() {
-<<<<<<< HEAD
 	return <Router>
     <CssBaseline />
       <Switch>
@@ -17,15 +16,10 @@ function App() {
           </div>
           } />
           <Route path="/auth" exact component={() => <Auth />} />
-          <Route path="/user" exact component={() => <Login />} />
-		  <Route path="/user" exact component={() => <Register />} />
+          <Route path="/login" exact component={() => <Login />} />
+		  <Route path="/register" exact component={() => <Register />} />
       </Switch>
     </Router>
-=======
-	return <Auth />
-	return <Login />
-	return <Register />
->>>>>>> 46e09014ef41c2a93eb838c1a83854ab88616e4f
 }
 
 // Rendering the entire react application

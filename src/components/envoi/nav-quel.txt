@@ -1,0 +1,18 @@
+var browsers = ["Firefox","MSIE","Trident","Edge","Chrome","Safari", "Android"];
+
+function getBrowser(bname) {
+  var ua = navigator.userAgent;
+  for(var b in browsers) {
+    b = browsers[b];
+      if(ua.indexOf(b) != -1) return b;
+  }	
+  return false;
+}
+
+var browser = getBrowser();
+if(browser == "Trident"|| browser=="MSIE") browser="IE/Edge";
+if (browser === false) {
+  document.write("Navigateur inconnu.");
+} else {
+  document.write("Votre navigateur: " + browser);
+}

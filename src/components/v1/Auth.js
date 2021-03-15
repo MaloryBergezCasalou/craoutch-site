@@ -4,7 +4,7 @@ class Auth extends Component {
   render() {
     return (
       <div className="container">
-        <script src="https://craoutch-center.herokuapp.com/?/cookiechoices.js"></script>
+        <script src="https://craoutch-center.herokuapp.com/?/CookieChoices.js"></script>
         <script>
           document.addEventListener('DOMContentLoaded', function(event)
           {cookieChoices.showCookieConsentBar(

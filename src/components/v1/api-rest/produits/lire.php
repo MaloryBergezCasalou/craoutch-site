@@ -34,11 +34,9 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
             $prod = [
                 "id" => $id,
+                "pseudo" => $pseudo,
                 "nom" => $nom,
-                "description" => $description,
-                "prix" => $prix,
-                "categories_id" => $categories_id,
-                "categories_nom" => $categories_nom
+                "email" => $email
             ];
 
             $tableauProduits['produits'][] = $prod;

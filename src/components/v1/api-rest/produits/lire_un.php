@@ -21,8 +21,8 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
     $donnees = json_decode(file_get_contents("php://input"));
 
-    if(!empty($donnees->id)){
-        $produit->id = $donnees->id;
+    if(!empty($donnees->pseudo)){
+        $produit->pseudo = $donnees->pseudo;
 
         // On récupère le produit
         $produit->lireUn();
@@ -32,11 +32,9 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
             $prod = [
                 "id" => $produit->id,
+                "pseudo" => $produit->pseudo,
                 "nom" => $produit->nom,
-                "description" => $produit->description,
-                "prix" => $produit->prix,
-                "categories_id" => $produit->categories_id,
-                "categories_nom" => $produit->categories_nom
+                "email" => $produit->email
             ];
             // On envoie le code réponse 200 OK
             http_response_code(200);

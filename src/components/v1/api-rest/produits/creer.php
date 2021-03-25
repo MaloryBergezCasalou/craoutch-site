@@ -22,13 +22,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     // On récupère les informations envoyées
     $donnees = json_decode(file_get_contents("php://input"));
     
-    if(!empty($donnees->nom) && !empty($donnees->description) && !empty($donnees->prix) && !empty($donnees->categories_id)){
+    if(!empty($donnees->nom) && !empty($donnees->email) && !empty($donnees->id)){
         // Ici on a reçu les données
         // On hydrate notre objet
         $produit->nom = $donnees->nom;
-        $produit->description = $donnees->description;
-        $produit->prix = $donnees->prix;
-        $produit->categories_id = $donnees->categories_id;
+        $produit->email = $donnees->email;
+        $produit->id = $donnees->id;
 
         if($produit->creer()){
             // Ici la création a fonctionné

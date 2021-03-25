@@ -23,7 +23,6 @@ if($_SERVER['REQUEST_METHOD'] == 'PUT'){
     $donnees = json_decode(file_get_contents("php://input"));
     
     if(!empty($donnees->id) && !empty($donnees->pseudo) && !empty($donnees->nom) && !empty($donnees->email)){
-        // Ici on a reçu les données
         // On hydrate notre objet
         $produit->id = $donnees->id;
         $produit->pseudo = $donnees->pseudo;
@@ -31,12 +30,10 @@ if($_SERVER['REQUEST_METHOD'] == 'PUT'){
         $produit->email = $donnees->email;
 
         if($produit->modifier()){
-            // Ici la modification a fonctionné
             // On envoie un code 200
             http_response_code(200);
             echo json_encode(["message" => "La modification a été effectuée"]);
         }else{
-            // Ici la création n'a pas fonctionné
             // On envoie un code 503
             http_response_code(503);
             echo json_encode(["message" => "La modification n'a pas été effectuée"]);         
@@ -45,5 +42,5 @@ if($_SERVER['REQUEST_METHOD'] == 'PUT'){
 }else{
     // On gère l'erreur
     http_response_code(405);
-    echo json_encode(["message" => "La méthode n'est pas autorisée"]);
+    echo json_encode(["message" => "La méthode n'est pas autorisée, ahahah"]);
 }

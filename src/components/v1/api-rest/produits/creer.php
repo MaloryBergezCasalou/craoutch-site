@@ -8,7 +8,6 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 // On vérifie la méthode
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    // On inclut les fichiers de configuration et d'accès aux données
     include_once '../config/Database.php';
     include_once '../models/Produits.php';
 
@@ -23,26 +22,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $donnees = json_decode(file_get_contents("php://input"));
     
     if(!empty($donnees->nom) && !empty($donnees->email) && !empty($donnees->id)){
-        // Ici on a reçu les données
+
         // On hydrate notre objet
         $produit->nom = $donnees->nom;
         $produit->email = $donnees->email;
         $produit->id = $donnees->id;
 
         if($produit->creer()){
-            // Ici la création a fonctionné
+
             // On envoie un code 201
             http_response_code(201);
             echo json_encode(["message" => "L'ajout a été effectué"]);
         }else{
-            // Ici la création n'a pas fonctionné
+
             // On envoie un code 503
             http_response_code(503);
-            echo json_encode(["message" => "L'ajout n'a pas été effectué"]);         
+            echo json_encode(["message" => "L'ajout n'a pas été effectué, ALED"]);         
         }
     }
 }else{
     // On gère l'erreur
     http_response_code(405);
-    echo json_encode(["message" => "La méthode n'est pas autorisée"]);
+    echo json_encode(["message" => "La méthode n'est pas autorisée, ahahah"]);
 }

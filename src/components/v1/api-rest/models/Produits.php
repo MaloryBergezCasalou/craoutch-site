@@ -25,16 +25,10 @@ class Produits{
      * @return void
      */
     public function lire(){
-        // On écrit la requête
+        // Requête
         $sql = "SELECT c.nom as categories_nom, p.id, p.nom, p.description, p.prix, p.categories_id, p.created_at FROM " . $this->table . " p LEFT JOIN categories c ON p.categories_id = c.id ORDER BY p.created_at DESC";
-
-        // On prépare la requête
         $query = $this->connexion->prepare($sql);
-
-        // On exécute la requête
         $query->execute();
-
-        // On retourne le résultat
         return $query;
     }
 
@@ -47,11 +41,9 @@ class Produits{
 
         // Ecriture de la requête SQL en y insérant le nom de la table
         $sql = "INSERT INTO " . $this->table . " SET nom=:nom, prix=:prix, description=:description, categories_id=:categories_id, created_at=:created_at";
-
-        // Préparation de la requête
         $query = $this->connexion->prepare($sql);
 
-        // Protection contre les injections
+        // Protection contre les sqli
         $this->id=htmlspecialchars(strip_tags($this->id));
         $this->pseudo=htmlspecialchars(strip_tags($this->pseudo));
         $this->nom=htmlspecialchars(strip_tags($this->nom));
@@ -75,19 +67,13 @@ class Produits{
      * @return void
      */
     public function lireUn(){
-        // On écrit la requête
+        // Requête
         $sql = "SELECT c.nom as p.id, p.pseudo, p.nom, p.email, p.created_at FROM " . $this->table . " p LEFT JOIN categories c ON p.id = c.id WHERE p.id = ? LIMIT 0,1";
-
-        // On prépare la requête
         $query = $this->connexion->prepare( $sql );
-
-        // On attache l'id
         $query->bindParam(1, $this->pseudo);
-
-        // On exécute la requête
         $query->execute();
 
-        // on récupère la ligne
+        // ligne
         $row = $query->fetch(PDO::FETCH_ASSOC);
 
         // On hydrate l'objet
@@ -103,10 +89,8 @@ class Produits{
      * @return void
      */
     public function supprimer(){
-        // On écrit la requête
+        // Requête
         $sql = "DELETE FROM " . $this->table . " WHERE id = ?";
-
-        // On prépare la requête
         $query = $this->connexion->prepare( $sql );
 
         // On sécurise les données
@@ -114,8 +98,6 @@ class Produits{
 
         // On attache l'pseudo
         $query->bindParam(1, $this->pseudo);
-
-        // On exécute la requête
         if($query->execute()){
             return true;
         }
@@ -129,10 +111,8 @@ class Produits{
      * @return void
      */
     public function modifier(){
-        // On écrit la requête
+        // Requête
         $sql = "UPDATE " . $this->table . " SET nom = :nom, email = :email, id = :id WHERE pseudo = :pseudo";
-        
-        // On prépare la requête
         $query = $this->connexion->prepare($sql);
         
         // On sécurise les données

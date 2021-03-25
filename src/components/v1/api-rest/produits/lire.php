@@ -18,8 +18,6 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
     // On instancie les produits
     $produit = new Produits($db);
-
-    // On récupère les données
     $stmt = $produit->lire();
 
     // On vérifie si on a au moins 1 produit
@@ -52,5 +50,5 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 }else{
     // On gère l'erreur
     http_response_code(405);
-    echo json_encode(["message" => "La méthode n'est pas autorisée"]);
+    echo json_encode(["message" => "La méthode n'est pas autorisée, ahahah"]);
 }

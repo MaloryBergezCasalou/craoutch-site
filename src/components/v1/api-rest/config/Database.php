@@ -6,8 +6,7 @@ class Database{
     private $username = "root";
     private $password = "";
     public $connexion;
-
-    // getter pour la connexion
+    
     public function getConnection(){
 
         $this->connexion = null;

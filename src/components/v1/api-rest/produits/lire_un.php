@@ -39,18 +39,17 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
             // On envoie le code réponse 200 OK
             http_response_code(200);
 
-            // On encode en json et on envoie
             echo json_encode($prod);
         }else{
             // 404 Not found
             http_response_code(404);
          
-            echo json_encode(array("message" => "Le produit n'existe pas."));
+            echo json_encode(array("message" => "Le produit n'existe pas. :'("));
         }
         
     }
 }else{
     // On gère l'erreur
     http_response_code(405);
-    echo json_encode(["message" => "La méthode n'est pas autorisée"]);
+    echo json_encode(["message" => "La méthode n'est pas autorisée, ahahah"]);
 }

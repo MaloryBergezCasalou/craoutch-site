@@ -20,24 +20,20 @@ USE `api_rest`;
 
 DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
-  `id` int(11) NOT NULL,
-  `nom` varchar(256) NOT NULL,
-  `description` text NOT NULL,
+  `id` varchar(64) NOT NULL,
+  `nom` varchar(32) NOT NULL,
+  `email` text NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `pseudo` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `categories`
 --
 
-INSERT INTO `categories` (`id`, `nom`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Mode', 'Catégorie pour tout ce qui est en rapport avec la mode.', '2019-06-01 00:32:07', '2019-08-30 15:34:33'),
-(2, 'Electronique', 'Gadgets, drones et plus.', '2018-06-03 02:34:11', '2019-01-30 16:34:33'),
-(3, 'Moteurs', 'Sports mécaniques', '2018-06-01 10:33:07', '2019-07-30 15:34:54'),
-(5, 'Films', 'Produits cinématographiques.', '2018-06-01 10:33:07', '2018-01-08 12:27:26'),
-(6, 'Livres', 'E-books, livres audio...', '2018-06-01 10:33:07', '2019-01-08 12:27:47'),
-(13, 'Sports', 'Articles de sport.', '2018-01-09 02:24:24', '2019-01-09 00:24:24');
+INSERT INTO `categories` (`id`, `nom`, `email`, `created_at`, `pseudo`) VALUES
+(1, 'johndoe', 'johndoe@mail.com', '2021-03-25 12:00:00', 'jojo'),
+(1, 'janedoe', 'janedoe@mail.com', '2021-03-25 12:00:00', 'jaja');
 
 -- --------------------------------------------------------
 

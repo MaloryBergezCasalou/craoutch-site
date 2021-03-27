@@ -1,1 +1,0 @@
-// check si ta le droit d'upload sur le repo (cookies de login)

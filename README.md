@@ -2,7 +2,7 @@
 
 ## Description
 
-L'équipe : Malory Bergez-Casalou, Philippot Cyrian, Darribau Mathieu, Laforest Arthur
+L'équipe : Malory Bergez-Casalou, Philippot Cyrian, DARRIBAU Mathieu, Laforest Arthur
 
 Détail du sujet :
 

@@ -10,7 +10,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                npm run build
+               dir(‘craoutch-site/’) {
+                sh ‘npm run build’
+                }
                 echo 'hello there'
             }
         }

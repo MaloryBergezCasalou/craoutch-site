@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 dir('craoutch-site/') {
-                    sh 'npm run build'
+                    npm run build
                 }
                 echo 'hello there'
             }

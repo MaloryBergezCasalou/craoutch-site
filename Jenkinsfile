@@ -21,8 +21,7 @@ pipeline {
         
         stage('Running') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                sh('curl https://craoutch-center.herokuapp.com/')
+                echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}, site hosted on https://craoutch-center.herokuapp.com/"
             }
         }
     }

@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh "echo version := ${env.BUILD_ID} >> version.txt"
+                echo "${env.BUILD_ID} >> version.txt"
             }
         }
         stage('Deploy') {

@@ -10,9 +10,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                dir('craoutch-site') {
-                    sh 'npm run build'
-                }
                 echo 'hello there'
             }
         }
